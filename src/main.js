@@ -453,6 +453,8 @@ function showOptimalSolutions() {
     return;
   }
 
+  solveButton.disabled = true;
+  
   solutionPanel.hidden = false;
 
   plusOneSection.hidden = true;

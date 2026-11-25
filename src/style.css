@@ -82,6 +82,7 @@ select {
 }
 
 .cube-viewer {
+  position: relative;
   width: 100%;
   height: min(70vh, 680px);
   min-height: 420px;
@@ -91,10 +92,15 @@ select {
   background: #b0b3b6;
 
   border-radius: 12px;
-}
 
-#resetCameraButton {
-  align-self: flex-start;
+  #resetCameraButton {
+    position: absolute;
+
+    top: 12px;
+    left: 12px;
+
+    z-index: 10;
+  }
 }
 
 
@@ -258,10 +264,15 @@ button:disabled {
   padding: 10px 12px;
 
   font-family:
-    "Consolas",
-    "Courier New",
+    ui-monospace,
+    "SFMono-Regular",
+    Menlo,
+    Monaco,
+    Consolas,
+    "Liberation Mono",
     monospace;
 
+  font-weight: 450;
   font-size: 16px;
   line-height: 1.5;
 
@@ -291,7 +302,7 @@ button:disabled {
 #plusOneCount {
   color: #777777;
   font-size: 13px;
-  font-weight: 400;
+  font-weight: 450;
 }
 
 .solution-list {
@@ -300,11 +311,16 @@ button:disabled {
   gap: 4px;
 
   font-family:
-    "Consolas",
-    "Courier New",
+    ui-monospace,
+    "SFMono-Regular",
+    Menlo,
+    Monaco,
+    Consolas,
+    "Liberation Mono",
     monospace;
 
   font-size: 15px;
+  font-weight: 450;
   line-height: 1.45;
 }
 
@@ -371,6 +387,34 @@ button:disabled {
 ========================================================= */
 
 @media (max-width: 850px) {
+  .control-section {
+    display: contents;
+  }
+
+  .input-panel {
+    order: 1;
+  }
+
+  .random-panel {
+    order: 2;
+  }
+
+  .cube-section {
+    order: 3;
+  }
+
+  .current-panel {
+    order: 4;
+  }
+
+  .solution-panel {
+    order: 5;
+  }
+
+  #statusMessage {
+    order: 6;
+  }
+
   #app {
     padding: 16px;
   }
@@ -445,85 +489,84 @@ button:disabled {
 ========================================================= */
 
 .prefix-control {
-    position: relative;
+  position: relative;
 }
 
 #prefixButton {
-    min-width: 88px;
+  min-width: 88px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    gap: 7px;
+  gap: 7px;
 
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 
 .prefix-menu {
-    position: absolute;
+  position: absolute;
 
-    left: 0;
-    top: calc(100% + 6px);
+  left: 0;
+  top: calc(100% + 6px);
 
-    z-index: 20;
+  z-index: 20;
 
-    display: grid;
+  display: grid;
 
-    grid-template-columns:
-        repeat(2, 58px);
+  grid-template-columns:
+    repeat(2, 58px);
 
-    gap: 5px;
+  gap: 5px;
 
-    padding: 6px;
+  padding: 6px;
 
-    background: #ffffff;
+  background: #ffffff;
 
-    border: 1px solid #c8c8c8;
-    border-radius: 8px;
+  border: 1px solid #c8c8c8;
+  border-radius: 8px;
 
-    box-shadow:
-        0 5px 18px
-        rgba(0, 0, 0, 0.14);
+  box-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.14);
 }
 
 
 .prefix-option {
-    min-width: 0;
-    height: 48px;
+  min-width: 0;
+  height: 48px;
 
-    padding: 5px;
+  padding: 5px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    background: #ffffff;
+  background: #ffffff;
 
-    border-color: transparent;
+  border-color: transparent;
 }
 
 
 .prefix-option:hover:not(:disabled) {
-    background: #eeeeee;
+  background: #eeeeee;
 }
 
 
 /* No prefix occupies the whole top row */
 
 .prefix-none {
-    grid-column: 1 / -1;
+  grid-column: 1 / -1;
 
-    width: 100%;
-    height: 34px;
+  width: 100%;
+  height: 34px;
 
-    font-size: 13px;
+  font-size: 13px;
 
-    border-bottom:
-        1px solid #dddddd;
+  border-bottom:
+    1px solid #dddddd;
 
-    border-radius: 4px;
+  border-radius: 4px;
 }
 
 
@@ -536,74 +579,73 @@ button:disabled {
 ========================================================= */
 
 .fb-prefix-icon {
-    width: 36px;
-    height: 32.4px;
+  width: 36px;
+  height: 32.4px;
 
-    flex: 0 0 auto;
+  flex: 0 0 auto;
 
-    display: grid;
+  display: grid;
 
-    grid-template-rows:
-        12fr
-        7fr;
+  grid-template-rows:
+    12fr 7fr;
 
-    overflow: hidden;
+  overflow: hidden;
 
-    border:
-        2.5px solid #3d3d3d;
+  border:
+    2.5px solid #3d3d3d;
 }
 
 
 .fb-prefix-top,
 .fb-prefix-bottom {
-    display: block;
+  display: block;
 }
 
 
 .fb-prefix-bottom {
-    border-top:
-        2.5px solid #3d3d3d;
+  border-top:
+    2.5px solid #3d3d3d;
 }
 
 
 /* Smaller icon when displayed inside the main prefix button */
 
 #prefixButton .fb-prefix-icon {
-    width: 26px;
-    height: 23.4px;
+  width: 26px;
+  height: 23.4px;
 
-    border-width: 2px;
+  border-width: 2px;
 }
 
 #prefixButton .fb-prefix-bottom {
-    border-top-width: 2px;
+  border-top-width: 2px;
 }
 
 
 /* Cube colors */
 
 .face-y {
-    background: #ffe359;
+  background: #ffe359;
 }
 
 .face-w {
-    background: #ffffff;
+  background: #ffffff;
 }
 
 .face-o {
-    background: #ff7a00;
+  background: #ff7a00;
 }
 
 .face-r {
-    background: #d60000;
+  background: #d60000;
 }
 
 .face-b {
-    background: #1764d7;
+  background: #1764d7;
 }
 
 .face-g {
-    background: #00a63c;
+  background: #00a63c;
 }
 
 
@@ -614,11 +656,16 @@ button:disabled {
 #currentOptimalLength,
 #currentOptimalCount {
   font-family:
-    "Consolas",
-    "Courier New",
+    ui-monospace,
+    "SFMono-Regular",
+    Menlo,
+    Monaco,
+    Consolas,
+    "Liberation Mono",
     monospace;
 
   font-size: 15px;
+  font-weight: 450;
 }
 
 

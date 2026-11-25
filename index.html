@@ -24,45 +24,21 @@
 
       <section class="cube-section">
 
-        <div id="cubeViewer" class="cube-viewer"></div>
-
-        <button id="resetCameraButton" type="button">
-          Reset view
-        </button>
+        <div id="cubeViewer" class="cube-viewer">
+          <button id="resetCameraButton" type="button">
+            Reset view
+          </button>
+        </div>
 
       </section>
 
 
       <section class="control-section">
 
-        <div class="panel">
 
-          <h2>Random case</h2>
+        <div class="panel input-panel">
 
-          <div class="control-row">
-
-            <label for="distSelect">
-              Optimal length
-            </label>
-
-            <select id="distSelect">
-              <option value="">
-                Loading...
-              </option>
-            </select>
-
-            <button id="randomButton" type="button" disabled>
-              Random
-            </button>
-
-          </div>
-
-        </div>
-
-
-        <div class="panel">
-
-          <h2>Input scramble</h2>
+          <h2>Enter scramble</h2>
 
           <div class="scramble-input-row">
 
@@ -162,8 +138,31 @@
 
         </div>
 
+        <div class="panel random-panel">
 
-        <div class="panel">
+          <h2>Random case</h2>
+
+          <div class="control-row">
+
+            <label for="distSelect">
+              Optimal length
+            </label>
+
+            <select id="distSelect">
+              <option value="">
+                Loading...
+              </option>
+            </select>
+
+            <button id="randomButton" type="button" disabled>
+              Random
+            </button>
+
+          </div>
+
+        </div>
+
+        <div class="panel current-panel">
 
           <h2>Current case</h2>
 
@@ -229,7 +228,7 @@
         </div>
 
 
-        <div id="solutionPanel" class="panel" hidden>
+        <div id="solutionPanel" class="panel solution-panel" hidden>
 
           <h2>Solutions</h2>
 
