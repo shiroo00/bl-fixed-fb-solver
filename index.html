@@ -35,133 +35,133 @@
 
       <section class="control-section">
 
+        <div class="panel case-input-panel">
+          <div class="input-panel">
 
-        <div class="panel input-panel">
+            <h2>Enter scramble</h2>
 
-          <h2>Enter scramble</h2>
+            <div class="scramble-input-row">
 
-          <div class="scramble-input-row">
+              <div id="prefixControl" class="prefix-control">
 
-            <div id="prefixControl" class="prefix-control">
-
-              <button id="prefixButton" type="button" aria-haspopup="true" aria-expanded="false">
-                Prefix
-              </button>
-
-              <div id="prefixMenu" class="prefix-menu" hidden>
-
-                <button type="button" class="prefix-option prefix-none" data-prefix="none">
-                  No prefix
+                <button id="prefixButton" type="button" aria-haspopup="true" aria-expanded="false">
+                  Prefix
                 </button>
 
+                <div id="prefixMenu" class="prefix-menu" hidden>
 
-                <button type="button" class="prefix-option" data-prefix="yo" aria-label="yellow orange">
-                  <span class="fb-prefix-icon">
-                    <span class="fb-prefix-top face-o"></span>
-                    <span class="fb-prefix-bottom face-y"></span>
-                  </span>
-                </button>
-
-                <button type="button" class="prefix-option" data-prefix="wo" aria-label="white orange">
-                  <span class="fb-prefix-icon">
-                    <span class="fb-prefix-top face-o"></span>
-                    <span class="fb-prefix-bottom face-w"></span>
-                  </span>
-                </button>
+                  <button type="button" class="prefix-option prefix-none" data-prefix="none">
+                    No prefix
+                  </button>
 
 
-                <button type="button" class="prefix-option" data-prefix="yr" aria-label="yellow red">
-                  <span class="fb-prefix-icon">
-                    <span class="fb-prefix-top face-r"></span>
-                    <span class="fb-prefix-bottom face-y"></span>
-                  </span>
-                </button>
+                  <button type="button" class="prefix-option" data-prefix="yo" aria-label="yellow orange">
+                    <span class="fb-prefix-icon">
+                      <span class="fb-prefix-top face-o"></span>
+                      <span class="fb-prefix-bottom face-y"></span>
+                    </span>
+                  </button>
 
-                <button type="button" class="prefix-option" data-prefix="wr" aria-label="white red">
-                  <span class="fb-prefix-icon">
-                    <span class="fb-prefix-top face-r"></span>
-                    <span class="fb-prefix-bottom face-w"></span>
-                  </span>
-                </button>
-
-
-                <button type="button" class="prefix-option" data-prefix="yb" aria-label="yellow blue">
-                  <span class="fb-prefix-icon">
-                    <span class="fb-prefix-top face-b"></span>
-                    <span class="fb-prefix-bottom face-y"></span>
-                  </span>
-                </button>
-
-                <button type="button" class="prefix-option" data-prefix="wb" aria-label="white blue">
-                  <span class="fb-prefix-icon">
-                    <span class="fb-prefix-top face-b"></span>
-                    <span class="fb-prefix-bottom face-w"></span>
-                  </span>
-                </button>
+                  <button type="button" class="prefix-option" data-prefix="wo" aria-label="white orange">
+                    <span class="fb-prefix-icon">
+                      <span class="fb-prefix-top face-o"></span>
+                      <span class="fb-prefix-bottom face-w"></span>
+                    </span>
+                  </button>
 
 
-                <button type="button" class="prefix-option" data-prefix="yg" aria-label="yellow green">
-                  <span class="fb-prefix-icon">
-                    <span class="fb-prefix-top face-g"></span>
-                    <span class="fb-prefix-bottom face-y"></span>
-                  </span>
-                </button>
+                  <button type="button" class="prefix-option" data-prefix="yr" aria-label="yellow red">
+                    <span class="fb-prefix-icon">
+                      <span class="fb-prefix-top face-r"></span>
+                      <span class="fb-prefix-bottom face-y"></span>
+                    </span>
+                  </button>
 
-                <button type="button" class="prefix-option" data-prefix="wg" aria-label="white green">
-                  <span class="fb-prefix-icon">
-                    <span class="fb-prefix-top face-g"></span>
-                    <span class="fb-prefix-bottom face-w"></span>
-                  </span>
-                </button>
+                  <button type="button" class="prefix-option" data-prefix="wr" aria-label="white red">
+                    <span class="fb-prefix-icon">
+                      <span class="fb-prefix-top face-r"></span>
+                      <span class="fb-prefix-bottom face-w"></span>
+                    </span>
+                  </button>
+
+
+                  <button type="button" class="prefix-option" data-prefix="yb" aria-label="yellow blue">
+                    <span class="fb-prefix-icon">
+                      <span class="fb-prefix-top face-b"></span>
+                      <span class="fb-prefix-bottom face-y"></span>
+                    </span>
+                  </button>
+
+                  <button type="button" class="prefix-option" data-prefix="wb" aria-label="white blue">
+                    <span class="fb-prefix-icon">
+                      <span class="fb-prefix-top face-b"></span>
+                      <span class="fb-prefix-bottom face-w"></span>
+                    </span>
+                  </button>
+
+
+                  <button type="button" class="prefix-option" data-prefix="yg" aria-label="yellow green">
+                    <span class="fb-prefix-icon">
+                      <span class="fb-prefix-top face-g"></span>
+                      <span class="fb-prefix-bottom face-y"></span>
+                    </span>
+                  </button>
+
+                  <button type="button" class="prefix-option" data-prefix="wg" aria-label="white green">
+                    <span class="fb-prefix-icon">
+                      <span class="fb-prefix-top face-g"></span>
+                      <span class="fb-prefix-bottom face-w"></span>
+                    </span>
+                  </button>
+
+                </div>
 
               </div>
 
+
+              <input id="scrambleInput" type="text" autocomplete="off" spellcheck="false">
+
+
+              <button id="invertButton" type="button">
+                Invert
+              </button>
+
+              <button id="clearButton" type="button">
+                Clear
+              </button>
+
+              <button id="readButton" type="button" disabled>
+                Read
+              </button>
+
             </div>
 
-
-            <input id="scrambleInput" type="text" autocomplete="off" spellcheck="false">
-
-
-            <button id="invertButton" type="button">
-              Invert
-            </button>
-
-            <button id="clearButton" type="button">
-              Clear
-            </button>
-
-            <button id="readButton" type="button" disabled>
-              Read
-            </button>
-
           </div>
 
-        </div>
+          <div class="random-panel">
 
-        <div class="panel random-panel">
+            <h2>Random case</h2>
 
-          <h2>Random case</h2>
+            <div class="control-row">
 
-          <div class="control-row">
+              <label for="distSelect">
+                Optimal length
+              </label>
 
-            <label for="distSelect">
-              Optimal length
-            </label>
+              <select id="distSelect">
+                <option value="">
+                  Loading...
+                </option>
+              </select>
 
-            <select id="distSelect">
-              <option value="">
-                Loading...
-              </option>
-            </select>
+              <button id="randomButton" type="button" disabled>
+                Random
+              </button>
 
-            <button id="randomButton" type="button" disabled>
-              Random
-            </button>
+            </div>
 
           </div>
-
         </div>
-
         <div class="panel current-panel">
 
           <h2>Current case</h2>

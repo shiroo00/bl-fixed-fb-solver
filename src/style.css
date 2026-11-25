@@ -142,6 +142,7 @@ select {
 }
 
 .control-row label {
+  font-size: 13px;
   font-weight: 600;
 }
 
@@ -391,12 +392,8 @@ button:disabled {
     display: contents;
   }
 
-  .input-panel {
+  .case-input-panel {
     order: 1;
-  }
-
-  .random-panel {
-    order: 2;
   }
 
   .cube-section {
@@ -711,4 +708,15 @@ button:disabled {
     grid-column: 1 / -1;
     grid-row: 3;
   }
+}
+
+.case-input-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.case-input-panel .random-panel {
+  border-top: 1px solid #dddddd;
+  padding-top: 14px;
 }
