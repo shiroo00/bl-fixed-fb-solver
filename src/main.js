@@ -218,21 +218,41 @@ function formatMoves(moves) {
 }
 
 
+const simultaneousPairs = new Set([
+    "U D'", "D' U",
+    "U' D", "D U'",
+    "U2 D2", "D2 U2",
+
+    "R L'", "L' R",
+    "R' L", "L R'",
+    "R2 L2", "L2 R2",
+
+    "F B'", "B' F",
+    "F' B", "B F'",
+    "F2 B2", "B2 F2"
+]);
+
 function formatAlg(alg) {
-  if (!alg) {
-    return '';
-  }
+    if (!alg) return '';
 
-  if (Array.isArray(alg)) {
-    return formatMoves(alg);
-  }
+    const moves = Array.isArray(alg)
+        ? alg
+        : alg.trim().split(/\s+/).filter(Boolean);
 
-  return formatMoves(
-    alg
-      .trim()
-      .split(/\s+/)
-      .filter(Boolean)
-  );
+    const result = [];
+
+    for (let i = 0; i < moves.length; i++) {
+        const pair = moves[i] + ' ' + moves[i + 1];
+
+        if (simultaneousPairs.has(pair)) {
+            result.push(`(${pair})`);
+            i++;
+        } else {
+            result.push(displayMoveMap[moves[i]] ?? moves[i]);
+        }
+    }
+
+    return result.join(' ');
 }
 
 
@@ -454,7 +474,7 @@ function showOptimalSolutions() {
   }
 
   solveButton.disabled = true;
-  
+
   solutionPanel.hidden = false;
 
   plusOneSection.hidden = true;
@@ -616,7 +636,7 @@ async function readManualScramble() {
   }
 
   const input =
-    scrambleInput.value.trim().replace(/[()]/, "");
+    scrambleInput.value.trim()//.replace(/[()]/, "");
 
   if (!input) {
     setStatus(
