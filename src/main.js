@@ -781,7 +781,7 @@ function invertScrambleInput() {
     scrambleInput.value =
       inverted.join(' ');
 
-    scrambleInput.focus();
+    //scrambleInput.focus();
 
     setStatus('');
   } catch (error) {
@@ -893,7 +893,7 @@ for (const option of prefixOptions) {
 
       closePrefixMenu();
 
-      scrambleInput.focus();
+      //scrambleInput.focus();
     }
   );
 }
