@@ -720,3 +720,22 @@ button:disabled {
   border-top: 1px solid #dddddd;
   padding-top: 14px;
 }
+
+#prefixButton,
+#invertButton,
+#clearButton {
+  background: #f5f5f5;
+  border-color: #d6d6d6;
+}
+
+#prefixButton:hover:not(:disabled),
+#invertButton:hover:not(:disabled),
+#clearButton:hover:not(:disabled) {
+  background: #eeeeee;
+}
+
+#prefixButton:active:not(:disabled),
+#invertButton:active:not(:disabled),
+#clearButton:active:not(:disabled) {
+  background: #e1e1e1;
+}
